@@ -102,4 +102,4 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-fastfetch --logo Pictures/catfire.txt --logo-type raw --logo-width 45 --logo-padding-top 2
+fastfetch --logo catfire.txt --logo-type raw --logo-width 45 --logo-padding-top 2
