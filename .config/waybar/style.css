@@ -4,7 +4,7 @@
     all: unset;
 }
 
-window#waybar {
+#waybar {
     background-color: rgba(0, 0, 0, 0.8);
     color: #ffffff;
     transition-property: background-color;
@@ -12,14 +12,15 @@ window#waybar {
     border-bottom: 2px solid white;
 }
 
-window#waybar.hidden {
+#waybar.hidden {
     opacity: 0.2;
-
-window#waybar.termite {
+}
+	
+#waybar.termite {
     background-color: #3F3F3F;
 }
 
-window#waybar.chromium {
+#waybar.chromium {
     background-color: #000000;
     border: none;
 }
