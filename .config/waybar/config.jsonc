@@ -2,8 +2,9 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 30,
+    "height": 25,
     "spacing": 0,
+    "output": "eDP-1",
     "modules-left": [
         "hyprland/workspaces",
         "hyprland/submap"
@@ -14,31 +15,36 @@
     "modules-right": [
         "pulseaudio",
         "network",
-        "cpu",
-        "memory",
+	"battery",
+        "hyprland/language",
         "clock",
         "power-profiles-daemon"
     ],
+    "hyprland/language":{
+        "format": "{}",
+	"format-en": "EN",
+	"format-es": "ES"
+    },
     "hyprland/workspaces": {
         "active-only": false,
         "all-outputs": true,
-        "show-special": true,
+        "show-special": false,
         "warp-on-scroll": true,
         "format": "{icon}",
         "on-scroll-up": "hyprctl dispatch workspace e-1",
         "on-scroll-down": "hyprctl dispatch workspace e+1",
         "format-icons": {
-            "1": "󰬺",
-            "2": "󰬻",
-            "3": "󰬼",
-            "4": "󰬽",
-            "5": "󰬾",
-            "6": "󰬿",
-            "7": "󰭀",
-            "8": "󰭁",
-            "9": "󰭂",
-            "10": "󰿩",
-            "magic": "",
+            "1": "󰣇",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "󰧮",
+            "6": "",
+            "7": "",
+            "8": "",
+            "9": "",
+            "10": "",
+            "music": "󰽴",
             "urgent": "",
             "focused": "󰼀",
             "default": "󰇀"
@@ -51,16 +57,9 @@
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
-    "cpu": {
-        "format": "<span font-family='FiraSansCompressed-Heavy' weight='bold'>{usage}%</span> ",
-        "tooltip": false
-    },
-    "memory": {
-        "format": "<span font-family='FiraSansCompressed-Heavy' weight='bold'>{}%</span> "
-    },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "<span font-family='FiraSansCompresed-Heavy' weight='bold'>{signalStrength}%</span> ",
+        "format-wifi": "{signalStrength}% ",
         "format-ethernet": "",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
@@ -69,11 +68,11 @@
     },
     "pulseaudio": {
         "scroll-step": 1, // %, can be a float
-        "format": "<span font-family='FiraSansCompressed-Heavy' weight='bold'>{volume}%</span> {icon}",
+        "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
-        "format-source": "<span font-family='FiraSansCompressed-Heavy' weight='bold'>{volume}%</span> ",
+        "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
@@ -99,5 +98,26 @@
 	    "status-icons": {
 		"paused": "󰐍"
 	    }
-    }
+    },
+    "battery": {
+	"interval": 60,
+	"states": {
+		"warning": 30,
+		"critical": 15
+	},
+	"format": "{capacity}% {icon}",
+	"format-icons": ["", "", "", "", ""],
+	"max-length": 25
+    },
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+  }
+}
 }

@@ -1,7 +1,14 @@
 * {
-    font-family: Nerd Font, FontAwesome, Roboto, Helvetica, Arial, sans-serif; 
+    font-family: '0xProto Nerd Font';
     font-size: 13px;
     all: unset;
+}
+
+tooltip {
+    font-family: '0xProto Nerd Font';
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid white;
 }
 
 #waybar {
@@ -15,7 +22,7 @@
 #waybar.hidden {
     opacity: 0.2;
 }
-	
+
 #waybar.termite {
     background-color: #3F3F3F;
 }
@@ -38,16 +45,26 @@ button:hover {
     box-shadow: inset 0 -3px #ffffff;
 }
 
+#language {
+    font-family: '0xProto Nerd Font Mono';
+    font-weight: bold;
+    min-width:20px;
+    padding: 0 5px;
+    background-color: transparent;
+    color: #ffffff;
+}
+
 #workspaces button {
+    font-family: '0xProto Nerd Font Mono';
     min-width: 18px;
-    font-size: 25px;
+    font-size: 19px;
     padding: 0 5px;
     background-color: transparent;
     color: #ffffff;
 }
 
 #workspaces button:hover {
-    background: rgba(30, 30, 30, 0.2);
+    background: rgba(30, 30, 30, 0.4);
 }
 
 #workspaces button.active {
@@ -56,11 +73,11 @@ button:hover {
 }
 
 #workspaces button.urgent, #workspaces button.special, #workspaces button.defautl, #workspaces button.focuced {
-    font-size: 15px;
 }
 
 #workspaces button.urgent {
     background-color: #eb4d4b;
+    box-shadow: inset 0 -2px #ffffff;
 }
 
 #mode {
@@ -84,6 +101,7 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
+#mpris,
 #mpd {
     padding: 0 10px 0 10px;
     color: #ffffff;
@@ -95,7 +113,7 @@ button:hover {
 }
 
 #window {
-  font-family: FiraSansCompressed-Heavy;
+  font-family: '0xProto Nerd Font Mono';
   font-weight: bold;
 }
 
@@ -109,18 +127,27 @@ button:hover {
 
 #clock {
     background-color: transparent;
-    font-family: FiraSansCompressed-Heavy;
+    font-family: '0xProto Nerd Font Mono';
+    font-weight: bold;
+}
+
+#mpris {
+    font-family: '0xProto Nerd Font';
     font-weight: bold;
 }
 
 #battery {
+    font-family: '0xProto Nerd Font Mono';
     background-color: transparent;
-    color: #000000;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 #battery.charging, #battery.plugged {
+    font-family: '0xProto Nerd Font Mono';
+    background-color: transparent;
     color: #ffffff;
-    background-color: #26A65B;
+    font-weight: bold;
 }
 
 @keyframes blink {
@@ -138,18 +165,22 @@ button:hover {
     animation-timing-function: steps(12);
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    font-weight: bold;
 }
 
 #power-profiles-daemon {
+    font-family: '0xProto Nerd Font Mono';
     background-color: transparent;
 }
 
 #power-profiles-daemon.performance {
+    font-family: '0xProto Nerd Font Mono';
     background-color: transparent;
     color: white;
 }
 
 #power-profiles-daemon.balanced {
+    font-family: '0xProto Nerd Font Mono';
     background-color: transparent;
     color: white;
 }
@@ -180,19 +211,27 @@ label:focus {
 }
 
 #network {
+    font-family: '0xProto Nerd Font Mono';
     background-color: transparent;
+    font-weight: bold;
 }
 
 #network.disconnected {
+    font-family: '0xProto Nerd Font Mono';
     background-color: transparent;
+    font-weight: bold;
 }
 
 #pulseaudio {
+    font-family: '0xProto Nerd Font Mono';
     background-color: transparent;
+    font-weight: bold;
 }
 
 #pulseaudio.muted {
+    font-family: '0xProto Nerd Font Mono';
     background-color: transparent;
+    font-weight: bold;
 }
 
 #wireplumber {
@@ -249,6 +288,7 @@ label:focus {
 
 #mpd {
     background-color: #66cc99;
+    font-family: '0xProto Nerd Font Mono';
     color: #2a5c45;
 }
 
@@ -264,23 +304,8 @@ label:focus {
     background-color: #51a37a;
 }
 
-#language {
-    background: #00b093;
-    color: #740864;
-    padding: 0 5px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state {
-    background: #97e1ad;
-    color: #000000;
-    padding: 0 0px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
 #keyboard-state > label {
+    font-family: '0xProto Nerd Font Mono';
     padding: 0 5px;
 }
 
